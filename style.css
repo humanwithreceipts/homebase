@@ -75,12 +75,55 @@ header h1 {
     font-size: 1.05rem;
 }
 
+.stats {
+    margin-bottom: 3.5rem;
+}
+
+.stats h2 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.stat-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1.4rem 1.6rem;
+    border-radius: 2px;
+}
+
+.stat-number {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.stat-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
 .stories {
     margin-bottom: 3.5rem;
 }
 
 .stories h2,
-.topics h2 {
+.topics h2,
+.case-studies h2,
+.quotes h2 {
     font-size: 0.85rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
@@ -129,6 +172,15 @@ header h1 {
 .story-card p {
     font-size: 0.95rem;
     color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+.story-card p:last-child {
+    margin-bottom: 0;
+}
+
+.case-studies {
+    margin-bottom: 3.5rem;
 }
 
 .topics {
@@ -167,6 +219,33 @@ header h1 {
     line-height: 1.6;
 }
 
+.quotes {
+    margin-bottom: 3.5rem;
+}
+
+blockquote {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 1.8rem;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+blockquote p {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+}
+
+blockquote cite {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
 .cta {
     text-align: center;
     margin-bottom: 4rem;
@@ -202,6 +281,30 @@ header h1 {
     color: var(--bg);
 }
 
+.btn-secondary {
+    border-color: var(--border-light);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    padding: 0.6rem 1.8rem;
+}
+
+.btn-secondary:hover {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--text-muted);
+}
+
+a {
+    color: var(--accent-dim);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
 footer {
     text-align: center;
     padding-top: 2rem;
@@ -216,8 +319,18 @@ footer {
     font-size: 0.8rem;
 }
 
+abbr[title] {
+    border-bottom: 1px dotted var(--text-muted);
+    cursor: help;
+}
+
 @media (min-width: 640px) {
     .topic-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .stat-grid {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
@@ -238,5 +351,9 @@ footer {
 
     .story-card {
         padding: 1.2rem 1.3rem;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
     }
 }
