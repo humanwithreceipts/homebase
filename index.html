@@ -3,186 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News & Local Models — Human With Receipts</title>
-    <meta name="description" content="A compact AI news dashboard: local model picks, video, audio, written sources, and practical trackers.">
-    <meta property="og:title" content="AI News & Local Models — Human With Receipts">
-    <meta property="og:description" content="Video, audio, written sources, and local model trackers worth watching now.">
+    <title>Human With Receipts — Under Construction</title>
+    <meta name="description" content="Human With Receipts — site under construction. Independent work on AI, open-source technology, and verifiable transparency.">
+    <meta property="og:title" content="Human With Receipts">
+    <meta property="og:description" content="Under construction. Independent work on AI, open-source technology, and verifiable transparency.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://humanwithreceipts.com">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --border: #222;
+            --text: #e0e0e0;
+            --text-muted: #888;
+            --accent: #c9a84c;
+            --accent-dim: #a07d2e;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background:
+                radial-gradient(circle at top left, rgba(201, 168, 76, 0.10), transparent 32rem),
+                radial-gradient(circle at bottom right, rgba(160, 125, 46, 0.08), transparent 28rem),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .eyebrow {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1.15;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            border: 1px solid var(--accent-dim);
+            border-radius: 999px;
+            padding: 0.35rem 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        p.lead {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 44ch;
+            margin: 0 auto 1.5rem;
+        }
+
+        p.note {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .divider {
+            width: 48px;
+            height: 1px;
+            background: var(--border);
+            margin: 2rem auto;
+        }
+
+        .email {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-dim);
+            padding-bottom: 2px;
+        }
+        .email:hover { color: #e0c066; }
+    </style>
 </head>
 <body>
-    <div class="container wide">
-        <header>
-            <p class="eyebrow">Human With Receipts</p>
-            <h1>AI News, Local Models, and Receipts</h1>
-            <p class="tagline">Video, audio, written sources, and practical model trackers.</p>
-        </header>
-
-        <main>
-            <section class="manifesto hero-panel">
-                <h2>Start here</h2>
-                <p>
-                    This page is the quick signal board: what to watch, listen to, read, and test locally.
-                    It favors sources that publish often, explain their reasoning, or maintain live model data.
-                </p>
-                <p class="updated">Last refreshed: July 2026.</p>
-            </section>
-
-            <section class="stories">
-                <h2>Local model shortlist</h2>
-                <article class="story-card highlight-card">
-                    <span class="label">Open-weight leaders</span>
-                    <h3>Frontier local / self-host watchlist</h3>
-                    <p>
-                        Artificial Analysis currently calls out GLM-5.2 and MiniMax-M3 as leading open-weight models,
-                        followed by DeepSeek V4 Pro and Kimi K2.6. These are the big-model benchmark names to watch,
-                        even when they are too large for a single local box.
-                    </p>
-                    <p><a href="https://artificialanalysis.ai/models/open-source" target="_blank" rel="noopener">Artificial Analysis open models leaderboard</a></p>
-                </article>
-
-                <div class="card-grid">
-                    <article class="story-card">
-                        <span class="label">Daily driver</span>
-                        <h3>Qorinth / Qwen / Gemma class</h3>
-                        <p>Best for everyday local chat, coding help, summarization, and private notes. Keep one strong default instead of hoarding tags.</p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Coding</span>
-                        <h3>Qwen Coder / agentic code models</h3>
-                        <p>Watch Qwen coder releases, North Mini Code, Laguna XS, and small MoE coding models that activate only a few billion parameters.</p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Multimodal</span>
-                        <h3>Gemma 4 / Qwen 3.5 / MiniCPM</h3>
-                        <p>Ollama now lists current vision, tools, thinking, audio, and video-understanding tags across Gemma, Qwen, and MiniCPM families.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="stories">
-                <h2>Video</h2>
-                <div class="card-grid">
-                    <article class="story-card">
-                        <span class="label">Daily news</span>
-                        <h3>The AI Daily Brief / AI Breakdown</h3>
-                        <p>Short, frequent YouTube updates. Recent videos surfaced include Fable, AI economy, licensing, and Claude Tag coverage.</p>
-                        <p><a href="https://www.youtube.com/@AIDailyBrief/videos" target="_blank" rel="noopener">Watch on YouTube</a></p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Deep technical</span>
-                        <h3>Latent Space video episodes</h3>
-                        <p>AI-engineer interviews and technical explainers from builders working on agents, models, infra, evals, and multimodality.</p>
-                        <p><a href="https://www.latent.space/podcast" target="_blank" rel="noopener">Open Latent Space</a></p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="stories">
-                <h2>Audio</h2>
-                <div class="card-grid">
-                    <article class="story-card">
-                        <span class="label">Podcast</span>
-                        <h3>Latent Space</h3>
-                        <p>Long-form AI engineering podcast. The page describes coverage across code generation, multimodality, agents, GPU infra, and AI for science.</p>
-                        <p><a href="https://www.latent.space/podcast" target="_blank" rel="noopener">Listen / subscribe</a></p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Podcast feed</span>
-                        <h3>The AI Breakdown</h3>
-                        <p>The AI Daily Brief channel links a podcast version for listening when video is too much.</p>
-                        <p><a href="https://pod.link/1680633614" target="_blank" rel="noopener">Open podcast feed</a></p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="stories">
-                <h2>Written</h2>
-                <div class="card-grid">
-                    <article class="story-card">
-                        <span class="label">Weekly signal</span>
-                        <h3>The Batch</h3>
-                        <p>DeepLearning.AI’s weekly AI news and insights. Recent issues covered GPT-5.6, robots, model-invoking-models, Apple on-device models, GLM5.2, Mythos, Fable, and Nvidia.</p>
-                        <p><a href="https://www.deeplearning.ai/the-batch" target="_blank" rel="noopener">Read The Batch</a></p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Research</span>
-                        <h3>Import AI</h3>
-                        <p>Jack Clark’s research newsletter. A recent issue covered self-improving robots, a 10k Chinese GPU cluster, and AI research automation.</p>
-                        <p><a href="https://jack-clark.net/" target="_blank" rel="noopener">Read Import AI</a></p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Model literacy</span>
-                        <h3>Ahead of AI</h3>
-                        <p>Sebastian Raschka’s writing is strong for understanding model architectures, reasoning LLMs, and open-weight releases.</p>
-                        <p><a href="https://magazine.sebastianraschka.com/" target="_blank" rel="noopener">Read Ahead of AI</a></p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Weekday roundup</span>
-                        <h3>Latent Space AINews</h3>
-                        <p>Latent Space also publishes weekday AI news roundups for fast scanning.</p>
-                        <p><a href="https://www.latent.space/s/ainews" target="_blank" rel="noopener">Open AINews</a></p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="stories">
-                <h2>Trackers</h2>
-                <div class="card-grid">
-                    <article class="story-card">
-                        <span class="label">Benchmarks</span>
-                        <h3>Artificial Analysis</h3>
-                        <p>Use for open-weight intelligence, speed, context, licensing, and provider comparisons.</p>
-                        <p><a href="https://artificialanalysis.ai/models/open-source" target="_blank" rel="noopener">Open leaderboard</a></p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Run locally</span>
-                        <h3>Ollama Library</h3>
-                        <p>Use for runnable tags, pull popularity, and practical local install choices.</p>
-                        <p><a href="https://ollama.com/library?sort=popular" target="_blank" rel="noopener">Browse Ollama models</a></p>
-                    </article>
-                    <article class="story-card">
-                        <span class="label">Raw ecosystem</span>
-                        <h3>Hugging Face Models</h3>
-                        <p>Use for trending models, GGUF uploads, adapters, image/audio/video models, and release velocity.</p>
-                        <p><a href="https://huggingface.co/models" target="_blank" rel="noopener">Browse Hugging Face</a></p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="topics">
-                <h2>Big news to watch</h2>
-                <div class="topic-grid">
-                    <div class="topic-item">
-                        <h4>Open-weight race</h4>
-                        <p>GLM, MiniMax, DeepSeek, Kimi, Qwen, Gemma, and GPT-OSS style releases are compressing the gap with closed models.</p>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Local multimodal</h4>
-                        <p>Vision, audio, tool-use, and video-understanding tags are moving into models people can actually pull and test.</p>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Agentic coding</h4>
-                        <p>Small active-parameter MoE coding models are the practical local story: fast enough to iterate, smart enough to help.</p>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Robotics loops</h4>
-                        <p>Import AI’s ENPIRE coverage points at the same loop pattern moving from coding agents into physical robot learning.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="cta">
-                <p>Want the receipts page too?</p>
-                <a href="research.html" class="btn btn-secondary">Research & Sources</a>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 Human With Receipts</p>
-            <p class="location">Built with AI. Verified by humans.</p>
-        </footer>
+    <div class="container">
+        <p class="eyebrow">Human With Receipts</p>
+        <h1>Under construction</h1>
+        <div class="badge">Site coming soon</div>
+        <p class="lead">
+            We're rebuilding this space. Independent work on AI, open-source
+            technology, and verifiable transparency — receipts to follow.
+        </p>
+        <div class="divider"></div>
+        <p class="note">
+            Questions or project inquiries:
+            <br>
+            <a class="email" href="mailto:humanwithreceipts@gmail.com">humanwithreceipts@gmail.com</a>
+        </p>
     </div>
 </body>
 </html>
